@@ -15,6 +15,7 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Language", name: "language", widget: "hidden", default: "mandarin" }
       - label: "Location"
         name: "location"
         widget: "select"
@@ -51,6 +52,7 @@ collections:
       preview: false
     fields:
     - { label: "Title", name: "title", widget: "string" }
+    - { label: "Language", name: "language", widget: "hidden", default: "english" }
     - label: "Location"
       name: "location"
       widget: "select"
