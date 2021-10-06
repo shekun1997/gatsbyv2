@@ -40,6 +40,7 @@ collections:
           - { label: "低回收价值", value: "low" }
           - { label: "中回收价值", value: "medium" }
           - { label: "高回收价值", value: "high" }
+      - { label: "Image", name: "image", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "english"
     label: "English"
@@ -75,4 +76,5 @@ collections:
         - { label: "Low Value", value: "low" }
         - { label: "Medium Value", value: "medium" }
         - { label: "High Value", value: "high" }
+    - { label: "Image", name: "image", widget: "image" }
     - { label: "Body", name: "body", widget: "markdown" }
