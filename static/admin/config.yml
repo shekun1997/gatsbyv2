@@ -6,18 +6,18 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'mandarin'
-    label: 'Mandarin'
-    folder: 'content/mandarin'
+  - name: "mandarin"
+    label: "Mandarin"
+    folder: "content/mandarin"
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - label: 'Location'
-        name: 'location'
-        widget: 'select'
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Location"
+        name: "location"
+        widget: "select"
         options: 
           - { label: "餐厅", value: "restaurant" }
           - { label: "学校", value: "school" }
@@ -25,34 +25,34 @@ collections:
           - { label: "家庭-卫浴", value: "bathroom" }
           - { label: "家庭-居家", value: "home" }
           - { label: "办公室", value: "office" }
-      - label: 'Recycle Type'
-        name: 'recycleType'
-        widget: 'select'
+      - label: "Recycle Type"
+        name: "recycleType"
+        widget: "select"
         options:
           - { label: "不可回收", value: "notRecyclable" }
           - { label: "部分可回收", value: "partiallyRecyclable" }
           - { label: "可回收", value: "recyclable" }
           - { label: "其他", value: "other" }
-      - label: 'Item Value'
-        name: 'itemValue'
-        widget: 'select'
+      - label: "Item Value"
+        name: "itemValue"
+        widget: "select"
         options:
           - { label: "低回收价值", value: "low" }
           - { label: "中回收价值", value: "medium" }
           - { label: "高回收价值", value: "high" }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'english'
-    label: 'English'
-    folder: 'content/english'
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "english"
+    label: "English"
+    folder: "content/english"
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     editor:
       preview: false
     fields:
-    - { label: 'Title', name: 'title', widget: 'string' }
-    - label: 'Location'
-      name: 'location'
-      widget: 'select'
+    - { label: "Title", name: "title", widget: "string" }
+    - label: "Location"
+      name: "location"
+      widget: "select"
       options: 
         - { label: "Restaurant", value: "restaurant" }
         - { label: "School", value: "school" }
@@ -60,89 +60,19 @@ collections:
         - { label: "Bathroom", value: "bathroom" }
         - { label: "Home", value: "home" }
         - { label: "Office", value: "office" }
-    - label: 'Recycle Type'
-      name: 'recycleType'
-      widget: 'select'
+    - label: "Recycle Type"
+      name: "recycleType"
+      widget: "select"
       options:
         - { label: "Not Recyclable", value: "notRecyclable" }
         - { label: "Partially Recyclable", value: "partiallyRecyclable" }
         - { label: "Recyclable", value: "recyclable" }
         - { label: "Other", value: "other" }
-    - label: 'Item Value'
-      name: 'itemValue'
-      widget: 'select'
+    - label: "Item Value"
+      name: "itemValue"
+      widget: "select"
       options:
         - { label: "Low Value", value: "low" }
         - { label: "Medium Value", value: "medium" }
         - { label: "High Value", value: "high" }
-    - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'malay'
-    label: 'Malay'
-    folder: 'content/malay'
-    create: true
-    slug: '{{slug}}'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - label: 'Location'
-        name: 'location'
-        widget: 'select'
-        options: 
-          - { label: "餐厅", value: "restaurant" }
-          - { label: "学校", value: "school" }
-          - { label: "家庭-厨房", value: "kitchen" }
-          - { label: "家庭-卫浴", value: "bathroom" }
-          - { label: "家庭-居家", value: "home" }
-          - { label: "办公室", value: "office" }
-      - label: 'Recycle Type'
-        name: 'recycleType'
-        widget: 'select'
-        options:
-          - { label: "不可回收", value: "notRecyclable" }
-          - { label: "部分可回收", value: "partiallyRecyclable" }
-          - { label: "可回收", value: "recyclable" }
-          - { label: "其他", value: "other" }
-      - label: 'Item Value'
-        name: 'itemValue'
-        widget: 'select'
-        options:
-          - { label: "低回收价值", value: "low" }
-          - { label: "中回收价值", value: "medium" }
-          - { label: "高回收价值", value: "high" }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'tamil'
-    label: 'Tamil'
-    folder: 'content/tamil'
-    create: true
-    slug: '{{slug}}'
-    editor:
-      preview: false
-    fields:
-    - { label: 'Title', name: 'title', widget: 'string' }
-    - label: 'Location'
-      name: 'location'
-      widget: 'select'
-      options: 
-        - { label: "餐厅", value: "restaurant" }
-        - { label: "学校", value: "school" }
-        - { label: "家庭-厨房", value: "kitchen" }
-        - { label: "家庭-卫浴", value: "bathroom" }
-        - { label: "家庭-居家", value: "home" }
-        - { label: "办公室", value: "office" }
-    - label: 'Recycle Type'
-      name: 'recycleType'
-      widget: 'select'
-      options:
-        - { label: "不可回收", value: "notRecyclable" }
-        - { label: "部分可回收", value: "partiallyRecyclable" }
-        - { label: "可回收", value: "recyclable" }
-        - { label: "其他", value: "other" }
-    - label: 'Item Value'
-      name: 'itemValue'
-      widget: 'select'
-      options:
-        - { label: "低回收价值", value: "low" }
-        - { label: "中回收价值", value: "medium" }
-        - { label: "高回收价值", value: "high" }
-    - { label: 'Body', name: 'body', widget: 'markdown' }
+    - { label: "Body", name: "body", widget: "markdown" }
