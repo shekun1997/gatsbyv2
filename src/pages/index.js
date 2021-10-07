@@ -64,7 +64,7 @@ const BlogIndex = ({ data, location }) => {
                   height={50}
                   quality={95}
                   alt="Profile picture"
-                  /> : "" }
+                  /> : <p>nope</p> }
               </article>
             </li>
           )
