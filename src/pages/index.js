@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -8,7 +9,7 @@ import Seo from "../components/seo"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-
+  console.log(data)
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -54,6 +55,16 @@ const BlogIndex = ({ data, location }) => {
                     itemProp="description"
                   />
                 </section>
+                { post.frontmatter.image ? <StaticImage
+                  className="bio-avatar"
+                  layout="fixed"
+                  formats={["auto", "webp", "avif"]}
+                  src="../../static/img/monke.png"
+                  width={50}
+                  height={50}
+                  quality={95}
+                  alt="Profile picture"
+                  /> : "" }
               </article>
             </li>
           )
@@ -82,6 +93,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          image
         }
       }
     }
