@@ -56,7 +56,7 @@ const BlogIndex = ({ data, location }) => {
                   className="bio-avatar"
                   layout="fixed"
                   formats={["auto", "webp", "avif"]}
-                  src="../../static/img/monke.png"
+                  src="../../static/img/0920aefdaca0235c1b5e22248b6dce61-1-.png"
                   width={50}
                   height={50}
                   quality={95}
