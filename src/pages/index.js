@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
@@ -31,7 +30,14 @@ const BlogIndex = ({ data, location }) => {
           const title = post.frontmatter.title || post.fields.slug
           console.log(post.frontmatter.image)
           return (
-            <div key={post.fields.slug}>
+            <div key={post.fields.slug}
+              style={{
+                display: `inline-block`,
+                margin: `25px`,
+                background: `yellow`,
+                padding: `25px`
+              }}
+            >
               <article
                 className="post-list-item"
                 itemScope
@@ -45,14 +51,6 @@ const BlogIndex = ({ data, location }) => {
                   </h2>
                   <small>{post.frontmatter.date}</small>
                 </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
                 {post.frontmatter.image && 
                 <Img fixed={post.frontmatter.image.childImageSharp.fixed}/>}
               </article>
