@@ -34,7 +34,7 @@ const BlogIndex = ({ data, location }) => {
               style={{
                 display: `inline-block`,
                 margin: `25px`,
-                background: `yellow`,
+                background: `grey`,
                 padding: `25px`
               }}
             >
