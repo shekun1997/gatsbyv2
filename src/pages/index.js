@@ -26,12 +26,12 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
-      <ol style={{ listStyle: `none` }}>
+      
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
           console.log(post.frontmatter.image)
           return (
-            <li key={post.fields.slug}>
+            <div key={post.fields.slug}>
               <article
                 className="post-list-item"
                 itemScope
@@ -55,20 +55,11 @@ const BlogIndex = ({ data, location }) => {
                 </section>
                 {post.frontmatter.image && 
                 <Img fixed={post.frontmatter.image.childImageSharp.fixed}/>}
-                
-                
-                
-                
-                
-                
-                
-                
-                
               </article>
-            </li>
+            </div>
           )
         })}
-      </ol>
+      
     </Layout>
   )
 }
@@ -94,7 +85,7 @@ export const pageQuery = graphql`
           description
           image {
             childImageSharp {
-              fixed(height: 150) {
+              fixed(width: 100, height: 100) {
                 ...GatsbyImageSharpFixed
               }
             }

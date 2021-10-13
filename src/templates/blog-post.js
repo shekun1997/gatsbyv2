@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -31,7 +31,7 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <hr />
         <footer>
-          <Bio />
+        {post.frontmatter.image && <Img fixed={post.frontmatter.image.childImageSharp.fixed}/>}
         </footer>
       </article>
       <nav className="blog-post-nav">
@@ -83,8 +83,14 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
         description
+        image {
+          childImageSharp {
+            fixed(width: 100, height: 100) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
