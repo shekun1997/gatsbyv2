@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -28,7 +29,7 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-
+          console.log(post.frontmatter.image)
           return (
             <li key={post.fields.slug}>
               <article
@@ -52,16 +53,17 @@ const BlogIndex = ({ data, location }) => {
                     itemProp="description"
                   />
                 </section>
-                { post.frontmatter.image ? <StaticImage
-                  className="bio-avatar"
-                  layout="fixed"
-                  formats={["auto", "webp", "avif"]}
-                  src="../../static/img/0920aefdaca0235c1b5e22248b6dce61-1-.png"
-                  width={50}
-                  height={50}
-                  quality={95}
-                  alt="Profile picture"
-                  /> : <p>nope</p> }
+                {post.frontmatter.image && 
+                <Img fixed={post.frontmatter.image.childImageSharp.fixed}/>}
+                
+                
+                
+                
+                
+                
+                
+                
+                
               </article>
             </li>
           )
@@ -90,7 +92,13 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
-          
+          image {
+            childImageSharp {
+              fixed(height: 150) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
         }
       }
     }
