@@ -8,7 +8,7 @@ import Seo from "../components/seo"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-  console.log(data)
+
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -27,8 +27,8 @@ const BlogIndex = ({ data, location }) => {
       <Seo title="All posts" />
       
         {posts.map(post => {
+          console.log(post.frontmatter.description)
           const title = post.frontmatter.title || post.fields.slug
-          console.log(post.frontmatter.image)
           return (
             <div key={post.fields.slug}
               style={{
