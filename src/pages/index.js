@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -51,8 +51,7 @@ const BlogIndex = ({ data, location }) => {
                   </h2>
                   <small>{post.frontmatter.date}</small>
                 </header>
-                {post.frontmatter.image && 
-                <Img fixed={post.frontmatter.image.childImageSharp.fixed}/>}
+                {post.frontmatter.image.publicURL && <img src={post.frontmatter.image.publicURL} alt='test' height='100px' width='100px'/>}
               </article>
             </div>
           )
@@ -82,11 +81,7 @@ export const pageQuery = graphql`
           title
           description
           image {
-            childImageSharp {
-              fixed(width: 100, height: 100) {
-                ...GatsbyImageSharpFixed
-              }
-            }
+            publicURL
           }
         }
       }
