@@ -78,5 +78,5 @@ collections:
         - { label: "Low Value", value: "low" }
         - { label: "Medium Value", value: "medium" }
         - { label: "High Value", value: "high" }
-    - { label: "Image", name: "image", widget: "image" }
+    - { label: "Image", name: "image", widget: "image", required: false }
     - { label: "Body", name: "body", widget: "markdown" }
