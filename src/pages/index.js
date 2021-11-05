@@ -51,7 +51,7 @@ const BlogIndex = ({ data, location }) => {
                   </h2>
                   <small>{post.frontmatter.date}</small>
                 </header>
-                {post.frontmatter.image.publicURL && <img src={post.frontmatter.image.publicURL} alt='test' height='100px' width='100px'/>}
+                {post.frontmatter.image && <img src={post.frontmatter.image.publicURL} alt='test' height='100px' width='100px'/>}
               </article>
             </div>
           )

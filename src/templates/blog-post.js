@@ -31,7 +31,7 @@ const BlogPostTemplate = ({ data, location }) => {
         />
         <hr />
         <footer>
-        {post.frontmatter.image.publicURL && <img src={post.frontmatter.image.publicURL} alt='test' height='100px' width='100px'/>}
+        {post.frontmatter.image && <img src={post.frontmatter.image.publicURL} alt='test' height='100px' width='100px'/>}
         </footer>
       </article>
       <nav className="blog-post-nav">
