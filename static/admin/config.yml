@@ -15,7 +15,7 @@ collections:
       preview: false
     fields:
     - { label: "Language", name: "language", widget: "hidden", default: "english" }
-    - { label: "Trash Number", name: "trashnumber", widget: "string", required: true }
+    - { label: "Trash Number", name: "trashnumber", widget: "number", required: true }
     - { label: "Trash Name", name: "title", widget: "string", required: true }
     - { label: "Description1", name: "description1", widget: "string", required: true }
     #Component Section
