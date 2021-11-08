@@ -6,43 +6,6 @@ media_folder: static/img
 public_folder: ../../static/img
 
 collections:
-  - name: "mandarin"
-    label: "Mandarin"
-    folder: "content/mandarin"
-    create: true
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Language", name: "language", widget: "hidden", default: "mandarin" }
-      - label: "Location"
-        name: "location"
-        widget: "select"
-        options: 
-          - { label: "餐厅", value: "restaurant" }
-          - { label: "学校", value: "school" }
-          - { label: "家庭-厨房", value: "kitchen" }
-          - { label: "家庭-卫浴", value: "bathroom" }
-          - { label: "家庭-居家", value: "home" }
-          - { label: "办公室", value: "office" }
-      - label: "Recycle Type"
-        name: "recycleType"
-        widget: "select"
-        options:
-          - { label: "不可回收", value: "notRecyclable" }
-          - { label: "部分可回收", value: "partiallyRecyclable" }
-          - { label: "可回收", value: "recyclable" }
-          - { label: "其他", value: "other" }
-      - label: "Item Value"
-        name: "itemValue"
-        widget: "select"
-        options:
-          - { label: "低回收价值", value: "low" }
-          - { label: "中回收价值", value: "medium" }
-          - { label: "高回收价值", value: "high" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Body", name: "body", widget: "markdown" }
   - name: "english"
     label: "English"
     folder: "content/english"
@@ -51,32 +14,56 @@ collections:
     editor:
       preview: false
     fields:
-    - { label: "Title", name: "title", widget: "string" }
     - { label: "Language", name: "language", widget: "hidden", default: "english" }
-    - label: "Location"
-      name: "location"
-      widget: "select"
-      options: 
-        - { label: "Restaurant", value: "restaurant" }
-        - { label: "School", value: "school" }
-        - { label: "Kitchen", value: "kitchen" }
-        - { label: "Bathroom", value: "bathroom" }
-        - { label: "Home", value: "home" }
-        - { label: "Office", value: "office" }
-    - label: "Recycle Type"
-      name: "recycleType"
-      widget: "select"
-      options:
-        - { label: "Not Recyclable", value: "notRecyclable" }
-        - { label: "Partially Recyclable", value: "partiallyRecyclable" }
-        - { label: "Recyclable", value: "recyclable" }
-        - { label: "Other", value: "other" }
-    - label: "Item Value"
-      name: "itemValue"
+    - { label: "Trash Number", name: "trashnumber", widget: "string", required: true }
+    - { label: "Trash Name", name: "title", widget: "string", required: true }
+    - { label: "Description1", name: "description1", widget: "string", required: true }
+    #Component Section
+    - { label: "Component1", name: "component1", widget: "image", required: false }
+    - { label: "Trash Category1", name: "trashcategory1", widget: "image", required: false }
+    - { label: "Component2", name: "component2", widget: "image", required: false }
+    - { label: "Trash Category2", name: "trashcategory2", widget: "image", required: false }
+    - { label: "Component3", name: "component3", widget: "image", required: false }
+    - { label: "Trash Category3", name: "trashcategory3", widget: "image", required: false }
+    - { label: "Component4", name: "component4", widget: "image", required: false }
+    - { label: "Trash Category4", name: "trashcategory4", widget: "image", required: false }
+    #What To Do Section
+    - { label: "What To Do1", name: "whattodo1", widget: "image", required: false }
+    - label: "What To Do Option1"
+      name: "whattodooption1"
       widget: "select"
       options:
-        - { label: "Low Value", value: "low" }
-        - { label: "Medium Value", value: "medium" }
-        - { label: "High Value", value: "high" }
-    - { label: "Image", name: "image", widget: "image", required: false }
-    - { label: "Body", name: "body", widget: "markdown" }
+        - { label: "Plastic Bin", value: "plasticbin" }
+        - { label: "General Bin", value: "generalbin" }
+    - { label: "What To Do2", name: "whattodo2", widget: "image", required: false }
+    - label: "What To Do Option2"
+      name: "whattodooption2"
+      widget: "select"
+      options:
+        - { label: "Plastic Bin", value: "plasticbin" }
+        - { label: "General Bin", value: "generalbin" }
+    - { label: "What To Do3", name: "whattodo3", widget: "image", required: false }
+    - label: "What To Do Option3"
+      name: "whattodooption3"
+      widget: "select"
+      options:
+        - { label: "Plastic Bin", value: "plasticbin" }
+        - { label: "General Bin", value: "generalbin" }
+    - { label: "What To Do4", name: "whattodo4", widget: "image", required: false }
+    - label: "What To Do Option4"
+      name: "whattodooption4"
+      widget: "select"
+      options:
+        - { label: "Plastic Bin", value: "plasticbin" }
+        - { label: "General Bin", value: "generalbin" }
+    #Do It Well Section
+    - { label: "Do It Well1", name: "doitwell1", widget: "image", required: false }
+    - { label: "Do It Well Description1", name: "doitwelldesc1", widget: "string", required: false }
+    - { label: "Do It Well2", name: "doitwell2", widget: "image", required: false }
+    - { label: "Do It Well Description2", name: "doitwelldesc2", widget: "string", required: false }
+    - { label: "Do It Well3", name: "doitwell3", widget: "image", required: false }
+    - { label: "Do It Well Description3", name: "doitwelldesc3", widget: "string", required: false }
+    - { label: "Do It Well4", name: "doitwell4", widget: "image", required: false }
+    - { label: "Do It Well Description4", name: "doitwelldesc4", widget: "string", required: false }
+    #Second Description
+    - { label: "Description2", name: "description2", widget: "string", required: true }
