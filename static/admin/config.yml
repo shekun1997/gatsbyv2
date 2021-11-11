@@ -36,21 +36,21 @@ collections:
       options:
         - { label: "Plastic Bin", value: "plasticbin" }
         - { label: "General Bin", value: "generalbin" }
-        - { label: "WhatToDo", name: "whattodo1", widget: "image", required: false }
+    - { label: "WhatToDo", name: "whattodo1", widget: "image", required: false }
     - label: "WhatToDoOption2"
       name: "whattodooption2"
       widget: "select"
       options:
         - { label: "Plastic Bin", value: "plasticbin" }
         - { label: "General Bin", value: "generalbin" }
-        - { label: "WhatToDo", name: "whattodo1", widget: "image", required: false }
+    - { label: "WhatToDo", name: "whattodo1", widget: "image", required: false }
     - label: "WhatToDoOption3"
       name: "whattodooption3"
       widget: "select"
       options:
         - { label: "Plastic Bin", value: "plasticbin" }
         - { label: "General Bin", value: "generalbin" }
-        - { label: "WhatToDo", name: "whattodo1", widget: "image", required: false }
+    - { label: "WhatToDo", name: "whattodo1", widget: "image", required: false }
     - label: "WhatToDoOption4"
       name: "whattodooption4"
       widget: "select"
@@ -70,16 +70,3 @@ collections:
     - { label: "Do It Better1", name: "doitbetter1", widget: "string", required: false }
     #Second Description
     - { label: "Description2", name: "description2", widget: "string", required: true }
-
-    - label: "Testimonials"
-      name: "testimonials"
-      widget: "list"
-      summary: '{{fields.quote}} - {{fields.author.name}}'
-      fields:
-        - {label: Quote, name: quote, widget: string, required: false}
-        - label: Author
-          name: author
-          widget: object
-          fields:
-            - {label: Name, name: name, widget: string, required: false}
-            - {label: Avatar, name: avatar, widget: image, required: false}
