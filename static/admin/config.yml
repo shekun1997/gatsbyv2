@@ -15,55 +15,71 @@ collections:
       preview: false
     fields:
     - { label: "Language", name: "language", widget: "hidden", default: "english" }
-    - { label: "Trash Number", name: "trashnumber", widget: "number", required: true }
-    - { label: "Trash Name", name: "title", widget: "string", required: true }
+    - { label: "Trashnumber", name: "trashnumber", widget: "string", required: true }
+    - { label: "Trashname", name: "title", widget: "string", required: true }
     - { label: "Description1", name: "description1", widget: "string", required: true }
+    - { label: "Trash Image", name: "trashimage", widget: "image", required: true }
     #Component Section
     - { label: "Component1", name: "component1", widget: "image", required: false }
-    - { label: "Trash Category1", name: "trashcategory1", widget: "image", required: false }
+    - { label: "TrashCategory1", name: "trashcategory1", widget: "image", required: false }
     - { label: "Component2", name: "component2", widget: "image", required: false }
-    - { label: "Trash Category2", name: "trashcategory2", widget: "image", required: false }
+    - { label: "TrashCategory2", name: "trashcategory2", widget: "image", required: false }
     - { label: "Component3", name: "component3", widget: "image", required: false }
-    - { label: "Trash Category3", name: "trashcategory3", widget: "image", required: false }
+    - { label: "TrashCategory3", name: "trashcategory3", widget: "image", required: false }
     - { label: "Component4", name: "component4", widget: "image", required: false }
-    - { label: "Trash Category4", name: "trashcategory4", widget: "image", required: false }
+    - { label: "TrashCategory4", name: "trashcategory4", widget: "image", required: false }
     #What To Do Section
-    - { label: "What To Do1", name: "whattodo1", widget: "image", required: false }
-    - label: "What To Do Option1"
+    - { label: "WhatToDo", name: "whattodo1", widget: "image", required: false }
+    - label: "WhatToDoOption1"
       name: "whattodooption1"
       widget: "select"
       options:
         - { label: "Plastic Bin", value: "plasticbin" }
         - { label: "General Bin", value: "generalbin" }
-    - { label: "What To Do2", name: "whattodo2", widget: "image", required: false }
-    - label: "What To Do Option2"
+        - { label: "WhatToDo", name: "whattodo1", widget: "image", required: false }
+    - label: "WhatToDoOption2"
       name: "whattodooption2"
       widget: "select"
       options:
         - { label: "Plastic Bin", value: "plasticbin" }
         - { label: "General Bin", value: "generalbin" }
-    - { label: "What To Do3", name: "whattodo3", widget: "image", required: false }
-    - label: "What To Do Option3"
+        - { label: "WhatToDo", name: "whattodo1", widget: "image", required: false }
+    - label: "WhatToDoOption3"
       name: "whattodooption3"
       widget: "select"
       options:
         - { label: "Plastic Bin", value: "plasticbin" }
         - { label: "General Bin", value: "generalbin" }
-    - { label: "What To Do4", name: "whattodo4", widget: "image", required: false }
-    - label: "What To Do Option4"
+        - { label: "WhatToDo", name: "whattodo1", widget: "image", required: false }
+    - label: "WhatToDoOption4"
       name: "whattodooption4"
       widget: "select"
       options:
         - { label: "Plastic Bin", value: "plasticbin" }
         - { label: "General Bin", value: "generalbin" }
     #Do It Well Section
-    - { label: "Do It Well1", name: "doitwell1", widget: "image", required: false }
-    - { label: "Do It Well Description1", name: "doitwelldesc1", widget: "string", required: false }
-    - { label: "Do It Well2", name: "doitwell2", widget: "image", required: false }
-    - { label: "Do It Well Description2", name: "doitwelldesc2", widget: "string", required: false }
-    - { label: "Do It Well3", name: "doitwell3", widget: "image", required: false }
-    - { label: "Do It Well Description3", name: "doitwelldesc3", widget: "string", required: false }
-    - { label: "Do It Well4", name: "doitwell4", widget: "image", required: false }
-    - { label: "Do It Well Description4", name: "doitwelldesc4", widget: "string", required: false }
+    - { label: "DoItWell1", name: "doitwell1", widget: "image", required: false }
+    - { label: "DoItWellDescription1", name: "doitwelldesc1", widget: "string", required: false }
+    - { label: "DoItWell2", name: "doitwell2", widget: "image", required: false }
+    - { label: "DoItWellDescription2", name: "doitwelldesc2", widget: "string", required: false }
+    - { label: "DoItWell3", name: "doitwell3", widget: "image", required: false }
+    - { label: "DoItWellDescription3", name: "doitwelldesc3", widget: "string", required: false }
+    - { label: "DoItWell4", name: "doitwell4", widget: "image", required: false }
+    - { label: "DoItWellDescription4", name: "doitwelldesc4", widget: "string", required: false }
+    #Do It Better Section
+    - { label: "Do It Better1", name: "doitbetter1", widget: "string", required: false }
     #Second Description
     - { label: "Description2", name: "description2", widget: "string", required: true }
+
+    - label: "Testimonials"
+      name: "testimonials"
+      widget: "list"
+      summary: '{{fields.quote}} - {{fields.author.name}}'
+      fields:
+        - {label: Quote, name: quote, widget: string, required: false}
+        - label: Author
+          name: author
+          widget: object
+          fields:
+            - {label: Name, name: name, widget: string, required: false}
+            - {label: Avatar, name: avatar, widget: image, required: false}
